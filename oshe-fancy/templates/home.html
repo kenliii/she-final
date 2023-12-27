@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Restaurant Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+            <label for="menu-toggle" class="menu-icon">
+                <span class="menu-icon-line"></span>
+            </label>
+        </div>
+
+        <!-- Logo in the Center -->
+        <div class="navbar-logo">
+            <img src="{{ url_for('static', filename='path-to-your-logo.png') }}" alt="Your Logo">
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main Section -->
+    <section id="main-section">
+      <h1>Welcome to Our Restaurant</h1>
+      <p>Discover our delicious menu and excellent service.</p>
+      <div class="main-buttons">
+        <button onclick="location.href='/reservation';">
+          Make a Reservation
+        </button>
+        <button onclick="location.href='/order-pickup';">Order Pickup</button>
+        <button onclick="location.href='/order-delivery';">
+          Order Delivery
+        </button>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location-section">
+      <h2>OSHE Sushi Locations</h2>
+      <ul class="locations-list">
+        <li data-city="seattle">Seattle</li>
+        <li data-city="bay-area">Bay Area</li>
+        <li data-city="new-york">New York</li>
+        <li data-city="oregon">Oregon</li>
+        <li data-city="vancouver">Vancouver</li>
+    </ul>
+      <button id="find-restaurant-btn" onclick="findRestaurant()">
+        FIND A RESTAURANT NEAR YOU
+      </button>
+    </section>
+    
+    <!-- Food Slideshow Section -->
+    <section id="slideshow-section">
+      <h2>Our Specialties</h2>
+      <!-- Slideshow content goes here -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer-section">
+      <p>Terms of Use | All Rights Reserved | Privacy Policy</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
